@@ -1,0 +1,27 @@
+//Code by Aditya Sadavarte
+//This code is a part of an A3 assignment for Srishti Institute of Art, Design and Technology. 
+
+
+
+var n = 0;
+var c = 6;
+
+function setup() {
+  createCanvas(500, 500);
+  background(0);
+  angleMode(DEGREES);
+  colorMode(HSB);
+}
+
+function draw(){
+  var a = n * 137.3;
+  var r = c * sqrt(n);
+  
+  var x = r * cos(a) + width/2;
+  var y = r * sin(a) + height/2;
+  
+  fill(r%256, r%256, r%256);
+  noStroke();
+  ellipse(x,y,8,8);
+  n++;
+}
